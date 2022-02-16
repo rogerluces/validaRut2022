@@ -13,7 +13,7 @@ function checkRutPost(rut) {
 
     // Si no cumple con el mínimo ej. (n.nnn.nnn)
     if (cuerpo.length < 7) { rut.setCustomValidity("RUT Incompleto"); return false; }
-
+    if (cuerpo.length > 8) { rut.setCustomValidity("RUT Invalido"); return false; }
     // Calcular Dígito Verificador
     suma = 0;
     multiplo = 2;
